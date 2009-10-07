@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
 	bzero(&t, sizeof(Time));
 	t.current_time = t1; //Doesn't really have to be a time to send to the other machine... but why not?
 	int bytes = sendto(socket_c, (char *) &t, sizeof(Time), 0, (struct sockaddr *) &server, serverlen);
+	printf("sent bytes to server: %d\n", bytes);
 	if(bytes < 0) {
 		perror("Error sending message to the server");
 		exit(-1);
