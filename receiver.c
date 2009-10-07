@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 		timersub(&(t.current_time), &t4, &dTres);
 		timeradd(&dTreq, &dTres, &delayx2);
 		struct timeval delay = timerdiv(&delayx2, 2);
-		printf("Delay was %ds:%dus\n", (int) delay.tv_sec, (int) delay.tv_usec);
+		printf("Clock difference is %ds:%dus\n", (int) delay.tv_sec, (int) delay.tv_usec);
 	} else {
 		perror("Didn't receive a whole Time struct");
 		exit(-1);

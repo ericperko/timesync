@@ -1,6 +1,16 @@
 Eric Perko
 EECS 423
-Assignment 3
+Assignment 3, Problem 3
+
+There are two processes for this problem. The server process and the receiver process. The server process
+listens for the receiver to send it requests for time syncs. The receiver uses the timestamps from the server
+process in order to calculate the change value. After calculating the change value, the receiver outputs that value to
+the screen and exits.
+
+Note: I do not actually adjust the system clock, only disply the calculated clock difference.
+
+Also, if testing on multiple machines and getting errors, make sure that they are both Linux 32-bit, 
+as that is what I have tested this on.
 
 To Compile:
 	make

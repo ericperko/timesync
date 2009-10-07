@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 			struct timeval t3;
 			gettimeofday(&t3, NULL); 	//time when we sent it
 			times->current_time = t3;
-			int bytes = sendto(socket_s, (char *) times, sizeof(Time), 0, (struct sockaddr *) &client_addr, serverlen);
+			int bytes = sendto(socket_s, (char *) times, sizeof(Time), 0, (struct sockaddr *) &client_addr, serverlen); //should be doing some stuff with network byte order, but its not important for this assignment and is pretty standard stuff
 			if (bytes < 0) {
 				perror("Error sending reply to client");
 			}
