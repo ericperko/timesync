@@ -1,0 +1,10 @@
+Eric Perko
+EECS 423
+Assignment 3
+
+To Compile:
+	make
+
+To Run:
+	./server.out
+	./receiver.out <server-ip>
